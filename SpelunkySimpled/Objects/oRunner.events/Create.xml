@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<event category="CREATE" id="0">
+  <actions>
+    <action id="603" library="1">
+      <!--action name: Code-->
+      <kind>CODE</kind>
+      <allowRelative>false</allowRelative>
+      <question>false</question>
+      <canApplyTo>true</canApplyTo>
+      <actionType>CODE</actionType>
+      <functionName/>
+      <relative>false</relative>
+      <not>false</not>
+      <appliesTo>.self</appliesTo>
+      <arguments>
+        <argument kind="STRING">//show_message("runner created");
+
+global.idol = false;
+global.damsel = false;
+global.lake = false;
+global.hasSpectacles = false;
+
+
+global.altar = false;
+
+//note: theres still an ogame.altar commented out in scrRoomGen
+/*
+global.cityOfGold = false;
+
+global.noDarkLevel = false;
+global.hadDarkLevel = false;
+
+
+global.madeUdjatEye = false;
+global.madeBlackMarket = false;
+global.madeMarketEntrance = false;
+global.madeMoai = false;
+*/
+global.currLevel = 15;
+global.cityOfGold = true;
+//global.customSeed = 1022;
+
+
+global.totalCratesGen = 0;
+
+//draw_text(100, 100, "hello");
+
+scrInitLevel();
+//if(global.totalCratesGen &gt; 9){
+    show_message(string(global.customSeed));
+    show_message(string(global.totalCratesGen));
+//}
+
+global.customSeed += 1;
+room_goto(rRunner);
+
+
+
+</argument>
+      </arguments>
+    </action>
+  </actions>
+</event>
